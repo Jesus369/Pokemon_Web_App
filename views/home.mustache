@@ -6,7 +6,18 @@
   </head>
   <body>
 
-    <a href="/home/register">Register</a>
+    <a href="/home/registeruser">Register</a>
+    <a href="/home/userlogin">Login</a>
+    <a href="/home/userlogout">Logout</a>
 
+    {{#pokemon}}
+    <ul>
+      <li>{{name}}</li>
+    </ul>
+    {{/pokemon}}
+
+    {{#username}}
+    {{.}}
+    {{/username}}
   </body>
 </html>
