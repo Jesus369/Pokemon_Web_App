@@ -1,0 +1,61 @@
+.website_title {
+  font-family: 'Pokemon Hollow';
+  font-size: 5em;
+  list-style-type: none;
+  margin: 0 auto 0 auto;
+}
+
+.navbar {
+  background-color: red;
+  display: flex;
+  flex-direction: row;
+  padding: 1.4em;
+}
+
+.ul_navbar {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+}
+.username_span {
+  font-family: 'Pokemon Solid';
+  font-size: 1.5em;
+}
+.username_display {
+  list-style-type: none;
+  position: absolute;
+  right: 15px;
+}
+
+.contain_all {
+  display: flex;
+  flex-direction: row;
+}
+
+.pokemon_div_container {
+  background-color: lightblue;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  margin: 1em 1em 0 1em;
+  width: 50%;
+  float: left;
+}
+
+.pokemon_list {
+  list-style-type: none;
+}
+
+.left_side_bar {
+  border: 1px solid lightblue;
+  float: left;
+  margin: 1em 0 0 1em;
+  width: 20%;
+}
+
+.right_side_bar {
+  border: 1px solid lightblue;
+  float: left;
+  margin-top: 1em;
+  width: 20%;
+}
