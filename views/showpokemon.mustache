@@ -31,7 +31,9 @@
 
       <div class="pokedex_left">
         <div class="pokemon_id">{{pokeid}}</div>
-        <div class="display_image"></div>
+        <div class="display_image">
+          <img class="pokemon_image" src="/{{image}}">
+        </div>
 
         <table class="catch_table">
           <tr>
@@ -40,11 +42,12 @@
             <button class="catch_button">Catch</button>
           </form>
         </td>
-        <td class="empty_td"></td>
+        <td><button class="pokemon_button"><a class="pokemon_json" href="/home/pokemon/{{id}}/json">JSON</a></button></td>
       </tr>
       </table>
 
         <div class="pokemon_name">{{name}}</div>
+
       </div>
 
       <div class="pokedex_right">
@@ -57,7 +60,7 @@
           <td class="pokemon_stat">DEF: {{defense}}</td>
         </tr>
         <tr>
-          <td class="pokemon_stat"> SP: {{speed}}</td>
+          <td class="pokemon_stat">SPD: {{speed}}</td>
           <td class="pokemon_stat">SP ATK: {{spattack}}</td>
           <td class="pokemon_stat">SP DEF: {{spdefense}}</td>
         </tr>
