@@ -23,24 +23,38 @@
     </div>
 
     <div class="contain_all">
+
       <div class="left_side_bar">
-        Information in here
+        <li><a href="/home/grass">Grass</a></li>
+        <li><a href="/home/bug">Bug</a></li>
+        <li><a href="/home/fire">Fire</a></li>
+        <li><a href="/home/flying">Flying</a></li>
+        <li><a href="/home/normal">Normal</a></li>
+        <li><a href="/home/electric">Electric</a></li>
+
       </div>
 
       <div class="pokemon_div_container">
-
-        {{#pokemon}}
         <ul class="pokemon_list">
+          <li>To view all pokemon in a JSON format <a href="/jsonpokemon">Click Here</a>!</li>
+          {{#pokemon}}
           <li>
-              <a href="/home/pokemon/{{id}}">{{name}}</a>
+            <table>
+                <tr>
+                  <td>#0{{pokeid}}</td>
+                  <td><img class="home_pokemon_image" src="{{image}}"></td>
+                  <td><a href="/home/pokemon/{{id}}">{{name}}</a></td>
+                </tr>
+            </table>
           </li>
+          {{/pokemon}}
         </ul>
-        {{/pokemon}}
       </div>
 
       <div class="right_side_bar">
         information in here
       </div>
+
     </div>
 
 
