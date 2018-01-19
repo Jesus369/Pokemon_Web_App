@@ -7,42 +7,57 @@
   </head>
   <body>
 
-    <div class="navbar">
-      <table>
-      <tr class="ul_navbar">
-          <td class="nav_li"><a href="/home/registeruser">Register</a></td>
-          <td class="nav_li"><a href="/home/userlogin">Login</a></td>
-          <td class="nav_li"><a href="/home/userlogout">Logout</a></td>
+    <div class="header">
+      <table class="display_title">
+      <tr>
+          <td class="website_title">Pokebase</td>
+          <td><img class="pokeball_img" src="/public/pokeball.png"></td>
       </tr>
+      <table class="login_table">
+        <tr>
+          <th colspan="3">
+            <span class="username_span">{{#username}}{{.}}{{/username}}</span>
+            {{#userId}}<a href="/home/{{.}}">Account</a>{{/userId}}
+          </th>
+        </tr>
+
+        <tr>
+          <td class="login_li"><a href="/home/registeruser">Register</a></td>
+          <td class="login_li"><a href="/home/userlogin">Login</a></td>
+          <td class="login_li"><a href="/home/userlogout">Logout</a></td>
+        </tr>
       </table>
-      <li class="website_title">Pokebase</li>
-      <ul class="username_display">
-        <li><span class="username_span">{{#username}}{{.}}{{/username}}</span></li>
-        <li>{{#userId}}<a href="/home/{{.}}">Account</a>{{/userId}}</li>
-      </ul>
+
+      </table>
+
     </div>
+
+    <table class="navbar">
+      <tr>
+        <td class="nav_elements"><a href="/home">Home</td>
+      </tr>
+    </table>
 
     <div class="contain_all">
 
       <div class="left_side_bar">
-        <li><a href="/home/grass">Grass</a></li>
-        <li><a href="/home/bug">Bug</a></li>
-        <li><a href="/home/fire">Fire</a></li>
-        <li><a href="/home/flying">Flying</a></li>
-        <li><a href="/home/normal">Normal</a></li>
-        <li><a href="/home/electric">Electric</a></li>
-
+          <li class="grass_att"><a href="/home/grass">Grass</a></li>
+          <li class="bug_att"><a href="/home/bug">Bug</a></li>
+          <li class="fire_att"><a href="/home/fire">Fire</a></li>
+          <li class="flying_att"><a href="/home/flying">Flying</a></li>
+          <li class="normal_att"><a href="/home/normal">Normal</a></li>
+          <li class="electric_att"><a href="/home/electric">Electric</a></li>
       </div>
 
       <div class="pokemon_div_container">
         <ul class="pokemon_list">
           <li>To view all pokemon in a JSON format <a href="/jsonpokemon">Click Here</a>!</li>
           {{#pokemon}}
-          <li>
+          <li class="list_pokemon">
             <table>
                 <tr>
                   <td>#0{{pokeid}}</td>
-                  <td><img class="home_pokemon_image" src="{{image}}"></td>
+                  <td><img class="home_pokemon_image" src="/{{image}}"></td>
                   <td><a href="/home/pokemon/{{id}}">{{name}}</a></td>
                 </tr>
             </table>
